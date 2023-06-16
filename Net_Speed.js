@@ -18,7 +18,7 @@ if (typeof $argument != 'undefined') {
   arg = Object.fromEntries($argument.split('&').map(item => item.split('=')));
 }
 (async () => {
-  const mb = $.lodash_get(arg, 'mb') || 1
+  const mb = $.lodash_get(arg, 'mb') || 4
   const bytes = mb * 1024 * 1024
   let up = {'url': 'https://speed.cloudflare.com/__up', timeout:3000}
   let down = {'url': `https://speed.cloudflare.com/__down?bytes=${bytes}`, timeout:3000}
